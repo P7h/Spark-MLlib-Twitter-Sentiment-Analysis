@@ -3,7 +3,7 @@
 ## Introduction
 Project to analyze and visualize Sentiment of tweets in real-time on a world map using Spark MLlib.
 
-Please check the accompanying [Docker image](https://github.com/P7h/p7hb-docker-mllib-twitter-sentiment) for the environment related info and the [blogpost](http://P7h.org) for more info.
+Please check the accompanying [Docker image](https://hub.docker.com/r/p7hb/p7hb-docker-mllib-twitter-sentiment) for the environment related info and the [blogpost](http://P7h.org) for detailed info on this project.
 
 
 ## Demo
@@ -48,6 +48,24 @@ Also, please check [`build.sbt`](build.sbt) for more information on the various 
 * We will need unfettered internet access for executing this project.
 * Twitter App OAuth Credentials are mandatory. This is for retrieving tweets from Twitter in real-time.
 * We will download ~1.5 GB of data with this image and SBT dependencies, etc and also tweets.
+
+### Resources for the Docker machine
+* Stop docker-machine.
+
+	`docker-machine stop default`
+
+* Launch Virtual Box and click on settings of `default` instance, which should be in `Powered Off` state.
+* Fix the settings as highlighted in the screenshots below. Please note this is minimum required config; you might want to allocate more.
+
+#### Increase RAM
+![Docker Machine RAM](Docker_Machine__RAM.png)
+
+#### Increase # of CPUs
+![Docker Machine CPU](Docker_Machine__CPU.png)
+
+* Relaunch docker after modifying the settings.
+* Now `cat /proc/cpuinfo` should report 2 CPUs and `cat /proc/meminfo` should report 1.5 GB RAM.
+	* Or the resources you allocated earlier.
 
 
 ## Env Setup
