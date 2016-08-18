@@ -3,6 +3,12 @@
 ## Introduction
 Project to analyze and visualize Sentiment of tweets in real-time on a world map using Spark MLlib.
 
+Please check the accompanying [Docker image](https://github.com/P7h/p7hb-docker-mllib-twitter-sentiment) for the environment related info and the [blogpost](http://P7h.org) for more info.
+
+
+## Demo
+### TBD
+
 
 ## Features
 * TBD
@@ -11,10 +17,6 @@ Project to analyze and visualize Sentiment of tweets in real-time on a world map
 * For visualization, [Datamaps](https://datamaps.github.io/) built on D3.js is used to display the tweet location on the world map with a pop up for more details on hover.
 * Visualization is responsive and adjusts based on the resolution / resizing of the window.
 * This codebase has been updated with decent comments, wherever required.
-
-
-## Demo
-### TBD
 
 
 ## Dependencies
@@ -88,6 +90,17 @@ This might take sometime as SBT will initiate a download and setup of all the re
 
 ### Visualization app
 After a few minutes of launching the Spark jobs, point your browser on the host machine to [`http://192.168.99.100:9999/`](http://192.168.99.100:9999/) to view the Twitter Sentiment visualized on a world map.
+
+Hover over a bubble to see additional info about that data point.
+
+
+## TODO
+* Visualization could be completely scrapped for something better and UX needs a lot of uplifting.
+* Use Spark wrapper for [Stanford CoreNLP](https://spark-packages.org/package/databricks/spark-corenlp) and reduce the boilerplate code further.
+* Update the project to Spark v2.0.
+	* Push out RDD; hello DataFrames / Datasets.
+* GIF animation of the visualization.
+* TBD
 
 
 > ###NOTE:
