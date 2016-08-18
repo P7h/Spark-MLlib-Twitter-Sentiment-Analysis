@@ -1,0 +1,132 @@
+body {
+    background: #000;
+    padding: 10px;
+    margin: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: black;
+}
+.linker {
+    color: #ff9900;
+    background: #fff294;
+}
+.linker:hover {
+    color: blue;
+    background-color: #e7eaff
+}
+#header {
+    text-align: center;
+}
+#subtext1 {
+    text-align: center;
+    padding-top: 10px;
+}
+#subtext2 {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+h1 {
+    display: inline;
+    text-transform: uppercase;
+    text-shadow: 0 1px white, 0 1px #777;
+    text-align: center;
+    color: #E5DBD2;
+    text-decoration: underline;
+    border-bottom: double 3px;
+    font-size: 26px;
+}
+h3 {
+    display: inline;
+    float: center;
+    color: #E5DBD2;
+}
+#worldmap {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /*fill parent*/
+
+    //width: 1200px;
+    height: 80%;
+    margin: auto;
+    position: absolute;
+    background-color: #000;
+}
+.datamaps-hoverover {
+    stroke-width: 20px;
+}
+.hoverinfo {
+    padding: 10px 10px 10px 10px !important;
+    text-align: center;
+    max-width: 300px;
+    color: #000000;
+    font-size: 20px !important;
+    border: 1px solid #CCC;
+    border-radius: 0 8px 8px !important;
+}
+.tooltip h3 {
+    font-weight: bold;
+    font-style: italic;
+    background-color: rgba(247, 247, 247, 0.75);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #3333FF;
+    //color: rgba(0,0,0,1.0);
+    text-align: center;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+}
+
+.tooltip h4 {
+    font-weight: normal;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #002147;
+    text-align: center;
+}
+.tooltip h6 {
+    font-weight: normal;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #5F9F9F;
+    text-align: center;
+}
+.hoverinfo a {
+    font-size: 12px;
+    color: #000;
+    text-decoration: none;
+}
+/*.tooltip {
+    position: absolute;
+    max-width: 700px;
+    height: auto;
+    padding: 5px;
+    //background-color: #fff;
+    background-color: #606060;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    // pointer-events: none;  ¡MUY IMPORTANTE!
+    border: 0px;
+    border-radius: 8px;
+    font-family: "Helvetica Neue", "Helvetica";
+    font-size: 12px;
+    color: #fff;
+}*/
+.datamaps-legend {
+    font-size: 12px;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    right: 0;
+    top: 0;
+    display: block;
+    //padding: 5px;
+    height: 36px;
+    width: 80px;
+}
