@@ -7,7 +7,11 @@ Please check the accompanying [Docker image](https://hub.docker.com/r/p7hb/p7hb-
 
 
 ## Demo
-### TBD
+### GIF of Twitter Sentiment Visualization
+![GIF of Twitter Sentiment Visualization](Twitter_Sentiment_Visualization.gif)
+
+### Screenshot of Twitter Sentiment Visualization
+![Screenshot of Twitter Sentiment Visualization](Twitter_Sentiment_Visualization.png)
 
 
 ## Features
@@ -42,7 +46,7 @@ Also, please check [`build.sbt`](build.sbt) for more information on the various 
 ## Prerequisites for successful execution
 
 * A decent machine in which you can allocate at least the following to the Docker-machine [actually the more, the merrier]:
-	* 1.5 GB RAM
+	* 2 GB RAM
 	* 2 CPUs
 	* 6 GB free disk space
 * We will need unfettered internet access for executing this project.
@@ -64,7 +68,7 @@ Also, please check [`build.sbt`](build.sbt) for more information on the various 
 ![Docker Machine CPU](Docker_Machine__CPU.png)
 
 * Relaunch docker after modifying the settings.
-* Now `cat /proc/cpuinfo` should report 2 CPUs and `cat /proc/meminfo` should report 1.5 GB RAM.
+* Now `cat /proc/cpuinfo` should report 2 CPUs and `cat /proc/meminfo` should report 2 GB RAM.
 	* Or the resources you allocated earlier.
 
 
