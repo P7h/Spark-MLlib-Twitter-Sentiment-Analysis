@@ -1,4 +1,4 @@
-# Twitter sentiment analysis with Spark MLlib and visualization 
+# Twitter sentiment analysis with Spark MLlib and visualization [![HitCount](https://hitt.herokuapp.com/P7h/p7hb-docker-mllib-twitter-sentiment.svg)](https://github.com/P7h/Spark-MLlib-Twitter-Sentiment-Analysis)
 
 ## Introduction
 Project to analyse and visualize sentiment of tweets in real-time on a world map using Apache Spark ecosystem [Spark MLlib + Spark Streaming].
@@ -9,6 +9,9 @@ At a very high level, this project encapsulates and covers each of the following
 * Machine Learning » Naive Bayes Classifier [Apache Spark MLlib implementation]
 * Visualization » Sentiment visualization on a World map using Datamaps
 * DevOps » Docker Hub and Docker Image
+
+For more details on this project and the code associated with it, please check this [blogpost](http://P7h.org/blog/2016/08/21/spark-twitter-sentiment/ "» P7h.org").<br>
+Also, a Docker Image is available on [Docker Hub](https://hub.docker.com/r/p7hb/p7hb-docker-mllib-twitter-sentiment "» Docker Hub URL for the image") with the complete environment and dependencies installed and preconfigured.
 
 
 ## Visualization Demo and screenshots
@@ -122,30 +125,27 @@ Please note:
  * `spark` is the container name.
  * `spark` is host name of this container. 
  	* This is very important as Spark Slaves are started using this host name as the master.
- * Exposes ports 4040, 8080, 8081 for Spark Web UI console and 9999 for Twitter sentiment Visualization.
-
+ * The container exposes ports 4040, 8080, 8081 for Spark Web UI console and 9999 for Twitter sentiment Visualization.
 
 ### Twitter App OAuth credentials
 * The only manual intervention required in this project is setting up a Twitter App and updating OAuth credentials to connect to Twitter Streaming API. Please note that this is a critical step and without this, Spark will not be able to connect to Twitter or retrieve tweets with Twitter Streaming API and so, the visualization will be empty basically without any data.
 * Please check the [`application.conf`](src/main/resources/application.conf#L8-11) and add your own values and complete the integration of Twitter API to your application by looking at your values from [Twitter Developer Page](https://dev.twitter.com/apps).
 	* If you did not create a Twitter App before, then please create a new Twitter App on [Twitter Developer Page](https://dev.twitter.com/apps), where you will get all the required values of `application.conf`.
 
-
 ### Execute Spark Streaming job for sentiment prediction
 * Please execute [`/root/exec_spark_jobs.sh`](https://github.com/P7h/p7hb-docker-mllib-twitter-sentiment/blob/master/exec_spark_jobs.sh) in the console after updating the Twitter App OAuth credentials in `application.conf`.
 	* This script first starts Spark services [Spark Master and Spark Slave] and then launches Spark jobs one after the other.
 * This might take sometime as SBT will initiate a download and setup of all the required packages from Maven Central Repo and Typesafe repo as required.
 
-
 ### Visualization app
 * After a few minutes of launching the Spark jobs, point your browser on the host machine to [`http://192.168.99.100:9999/`](http://192.168.99.100:9999/) to view the Twitter sentiment visualized on a world map.<br>
-* When a tweet is classified, a small bubble appears on world map.
+* When a tweet is classified, a small bubble appears on world map exactly showing the location from which that tweet originated from.
 * Hovering over a bubble displays the corresponding tweet's additional info:
  1. tweet handle
  2. tweet profile pic
  3. date tweet created
  4. text of the tweet
- 5. sentiment predicted as per MLlib
+ 5. sentiment predicted by MLlib
  6. sentiment as per Stanford CoreNLP
 
 
@@ -159,7 +159,7 @@ Please note:
 
 
 ## Expert mode execution steps
-This is a very quick summary of the steps required for execution of this code.<br>
+This is a very quick recap / summary of the steps required for execution of this code.<br>
 Please consider these steps only if you are an expert on Docker, Spark and ecosystem of this project and understand clearly what is being done here.
 
 * Install and launch Docker.
@@ -178,7 +178,9 @@ Please consider these steps only if you are an expert on Docker, Spark and ecosy
 Please do not forget to modify the Twitter App OAuth credentials in the file [`application.conf`](src/main/resources/application.conf#L8-11).<br>
 Please check [Twitter Developer page](https://dev.twitter.com/apps "» create Twitter apps") for more info. 
 
+## Contributing [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](http://p7h.org/contact/)
+If you find any issues or would like to discuss further, please ping me on my Twitter handle [@P7h](http://twitter.com/P7h "» Twitter/@P7h") or drop me an [email](http://p7h.org/contact/ "» Contact me"). Appreciate your help. Thanks!
 
-## License
+## License [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 Copyright &copy; 2016 Prashanth Babu.<br>
 Licensed under the [Apache License, Version 2.0](LICENSE).

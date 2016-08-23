@@ -1,7 +1,7 @@
 from flask import Flask, render_template, Response, request
 
 import logging, redis
-from logging.handlers import RotatingFileHandler
+from logging.handlers import TimedRotatingFileHandler
 
 
 app = Flask(__name__)
@@ -30,7 +30,10 @@ def stream():
 
 if __name__ == '__main__':
     formatter = logging.Formatter("%(asctime)s -- %(message)s")
-    handler = RotatingFileHandler('Viz_Server.log', maxBytes=20971520, backupCount=50)
+    handler = TimedRotatingFileHandler('/root/Spark-MLlib-Twitter-Sentiment-Analysis/Viz_Server.log',
+                                       when="d",
+                                       interval=1,
+                                       backupCount=50)
     handler.setLevel(logging.INFO)
     handler.setFormatter(formatter)
     app.logger.addHandler(handler)

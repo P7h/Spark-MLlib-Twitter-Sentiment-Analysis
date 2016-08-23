@@ -45,8 +45,6 @@ object SparkNaiveBayesModelCreator {
   def createSparkContext(): SparkContext = {
     val conf = new SparkConf()
       .setAppName(this.getClass.getSimpleName)
-      .set("spark.streaming.unpersist", "true")
-      .set("spark.eventLog.enabled", "false")
       .set("spark.serializer", classOf[KryoSerializer].getCanonicalName)
     val sc = SparkContext.getOrCreate(conf)
     sc
