@@ -15,7 +15,7 @@ Also, a Docker Image is available on [Docker Hub](https://hub.docker.com/r/p7hb/
 
 
 > #### Note:
-I had actually written this as a blog post on my [personal website](http://P7h.org "» P7h.org"), but unfortunately I managed to corrupt my Octopress GitHub repo. :anguished: :weary: :rage: So, till the time I salvage it, I thought of publishing it as [GitHub wiki](https://github.com/P7h/Spark-MLlib-Twitter-Sentiment-Analysis/wiki/Blog "» Blog post") for the time being.
+I had actually written a blog post on my [personal website](http://P7h.org "» P7h.org") with the code walkthru and explaining intricate details; but unfortunately I managed to corrupt my Octopress GitHub repo. :anguished: :weary: :rage: So, till the time I salvage it, I thought of publishing it as [GitHub wiki](https://github.com/P7h/Spark-MLlib-Twitter-Sentiment-Analysis/wiki "» Blog post") for the time being.
 
 
 ## Visualization Demo and screenshots
@@ -154,14 +154,15 @@ Please note:
 
 
 ## TODO
-* TBD
 * Visualization could be completely scrapped for something better and UX needs a lot of uplifting.
-* Use Spark wrapper for [Stanford CoreNLP](https://spark-packages.org/package/databricks/spark-corenlp "» Spark Packages official website") and reduce the boilerplate code further.
+* Use Spark package / wrapper for [Stanford CoreNLP](https://spark-packages.org/package/databricks/spark-corenlp "» Spark Packages official website") and reduce the boilerplate code further.
+* Current prediction accuracy is ~80%. Prediction accuracy needs to be rethinked about and probably a better dataset should be used for creating the model.
+* Update the project to Spark v2.0.
+	* Push out RDDs; hello DataFrames and Datasets!
+	* And also use `org.apache.spark.ml` package.
+	* Also gain massive time due to many changes in the recent release of Apache Spark v2.0.
 * Add or update comments in the code where necessary.
-* Update the project to Spark v2.0.
-	* Push out RDDs and use `org.apache.spark.ml` package; hello DataFrames and Datasets!
-* Update the project to Spark v2.0.
-
+* Also processing and predicting non-English tweets too could be taken up in future.
 
 ## Expert mode execution steps
 This is a very quick recap / summary of the steps required for execution of this code.<br>
@@ -184,10 +185,10 @@ Please do not forget to modify the Twitter App OAuth credentials in the file [`a
 Please check [Twitter Developer page](https://dev.twitter.com/apps "» create Twitter apps") for more info. 
 
 ## Helpful links
-1. I am currently hosting this web app on Amazon EC2: [http://54.84.252.184:9999/](http://54.84.252.184:9999/). I will bring it down sometime next week.
+1. ~~I am currently hosting this web app on Amazon EC2: [http://54.84.252.184:9999/](http://54.84.252.184:9999/). I will bring it down sometime next week.~~ _Update on 19th September, 2016:_ After running the live app on EC2 for almost a month, I have shutdown this instance today.
 2. Docker Image on Docker Hub Registry: [https://hub.docker.com/r/p7hb/p7hb-docker-mllib-twitter-sentiment/](https://hub.docker.com/r/p7hb/p7hb-docker-mllib-twitter-sentiment/).
 3. GitHub URL for source code of the project: [https://github.com/P7h/Spark-MLlib-Twitter-Sentiment-Analysis](https://github.com/P7h/Spark-MLlib-Twitter-Sentiment-Analysis).
-4. GitHub URL for blog post on code walkthru: [https://github.com/P7h/Spark-MLlib-Twitter-Sentiment-Analysis/wiki/Blog](https://github.com/P7h/Spark-MLlib-Twitter-Sentiment-Analysis/wiki/Blog).
+4. GitHub URL for blog post on code walkthru: [https://github.com/P7h/Spark-MLlib-Twitter-Sentiment-Analysis/wiki/](https://github.com/P7h/Spark-MLlib-Twitter-Sentiment-Analysis/wiki/).
 5. Dockerfile GitHub repo: [https://github.com/P7h/p7hb-docker-mllib-twitter-sentiment](https://github.com/P7h/p7hb-docker-mllib-twitter-sentiment).
 
 
