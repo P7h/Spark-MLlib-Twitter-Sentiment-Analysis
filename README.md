@@ -5,7 +5,7 @@ Project to analyse and visualize sentiment of tweets in real-time on a world map
 
 At a very high level, this project encapsulates and covers each of the following broad topics:
 
-* Distributed Processing » Apache Spark
+* Distributed Stream Processing » Apache Spark
 * Machine Learning » Naive Bayes Classifier [Apache Spark MLlib implementation]
 * Visualization » Sentiment visualization on a World map using Datamaps
 * DevOps » Docker Hub and Docker Image
@@ -153,16 +153,16 @@ Please note:
  6. sentiment as per Stanford CoreNLP
 
 
-## TODO
+## Further work and improvement areas
 * Visualization could be completely scrapped for something better and UX needs a lot of uplifting.
 * Use Spark package / wrapper for [Stanford CoreNLP](https://spark-packages.org/package/databricks/spark-corenlp "» Spark Packages official website") and reduce the boilerplate code further.
 * Current prediction accuracy is ~80%. Prediction accuracy needs to be rethinked about and probably a better dataset should be used for creating the model.
-* Update the project to Spark v2.0.
+* Update the project to Apache Spark v2.0.
 	* Push out RDDs; hello DataFrames and Datasets!
 	* And also use `org.apache.spark.ml` package.
-	* Also gain massive time due to many changes in the recent release of Apache Spark v2.0.
-* Add or update comments in the code where necessary.
+	* Speed gains too!
 * Also processing and predicting non-English tweets too could be taken up in future.
+* Add or update comments in the code where necessary.
 
 ## Expert mode execution steps
 This is a very quick recap / summary of the steps required for execution of this code.<br>
