@@ -1,4 +1,4 @@
-# Twitter sentiment analysis with Spark MLlib and visualization [![HitCount](https://hitt.herokuapp.com/P7h/p7hb-docker-mllib-twitter-sentiment.svg)](https://github.com/P7h/Spark-MLlib-Twitter-Sentiment-Analysis)
+# Twitter sentiment analysis with Spark MLlib and visualization
 
 ## Introduction
 Project to analyse and visualize sentiment of tweets in real-time on a world map using Apache Spark ecosystem [Spark MLlib + Spark Streaming].
